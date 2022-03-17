@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Home</title>
+  </head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    
+    const Container = ({ children }) => (
+      <div className="container">{ children }</div>
+    );
+
+    const SearchBar = ({ children }) => (
+      <input type="text" placeholder={ children } className="search" id="searchBar"></input>
+    );
+
+    const Header = ({ title, search }) => (
+      <header className="headerContainer">
+        <h1 className="textH1">{ title }</h1>
+        <SearchBar>{ search }</SearchBar>
+      </header>
+    );
+
+    const Main = ({ children }) => (
+      <main className="mainContainer">{ children }</main>
+    );
+
+    const Link = ({ children }) => (
+      <a href="#" className="aLink">{ children }</a>
+    );
+
+    const MainSection = ({ children }) => (
+      <section className="mainSection">{ children }</section>
+    );
+   
+    const Button = ({ children }) => (
+      <button href="#" className="button">{ children }</button>
+    );
+    
+    function Contact ({ photo, name ,  detail }) {
+      return (
+        <div className="contactContainer">
+          <div className="profileContainer">
+            <img src={ photo } className="profileImg"></img>
+            <div className="profileInfo">
+              <h2 className="profileName">{ name }</h2>
+              <h3 className="profileDetail">{ detail }</h3>
+              </div>
+          </div>
+          <div className="buttonsContainer">
+            <Button>Call</Button>
+            <Button>Send e-mail</Button>
+          </div>
+        </div>
+    )};
+    
+    const element = (
+      <Container>
+        <Header title="CONTACT" search="Search" />
+        <Main>
+          <MainSection>
+            <Contact photo="./images/dark1.jpg" name="Jonas Kahnwald" detail="Student" />
+            <Contact photo="./images/dark2.jpg" name="Ulrich Nielsen" detail="Police Oficer" />
+            <Contact photo="./images/dark3.jpg" name="Helge Doppler" detail="Cleaner" />
+            <Contact photo="./images/dark4.jpg" name="Hannah Kahnwald" detail="Physiotherapist" />
+          </MainSection>
+          <Link>We found 23 contacts</Link>
+        </Main>
+      </Container>
+    );
+
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
+</html>

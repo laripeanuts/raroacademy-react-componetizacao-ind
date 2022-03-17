@@ -1,0 +1,138 @@
+:root {
+  --blue: #4D77FF;
+  --blueLight: #56BBF1;
+  --blueButton: #59e7f1;
+  --yellow: #F2FA5A;
+  --grey: rgb(118);
+  --yellowLight: #F1E1A6;
+  --pink: #F4BBBB;
+}
+
+//ALL
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--blue);
+  font-family: "Helvetica", sans-serif;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+//HEADER
+.headerContainer {
+
+}
+
+header.headerContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.textH1 {
+  color: var(--yellow);
+  font-size: 30px;
+}
+
+#searchBar {
+  border: none;
+  background: var(--yellow);
+  font-size: 25px;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  border-radius: 24px;
+}
+
+#searchBar:focus {
+  border: none;
+  background: var(--yellowLight);
+}
+
+//MAIN
+.mainSection {
+  padding: 25px 0px 0px 0;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+  background: var(--blueLight);
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 25px;
+}
+
+.profileContainer {
+	display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileImg{
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+.profileName {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  color: var(--yellowLight);
+  font-weight: normal;
+}
+
+.profileDetail {
+  padding: 0px;
+  margin: 0px;
+  font-size: 17px;
+  color: var(--pink);
+  font-weight: bold;
+}
+
+//BUTTONS
+
+.buttonsContainer {
+  display: flex;
+  gap: 2px;
+}
+
+.button {
+  background: var(--blueButton);
+  decoration: none;
+  border: 1px solid var(--yellow);
+  border-radius: 8px;
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 5px 10px 5px;
+  margin-right: 5px;
+}
+
+.aLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.aLink:hover {
+  color: var(--yellowLight);
+}
