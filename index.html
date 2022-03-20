@@ -44,10 +44,14 @@
     const Button = ({ children }) => (
       <button href="#" className="button">{ children }</button>
     );
+
+    const ButtonContainer = ({ children }) => (
+      <div className="buttonsContainer">{ children }</div>
+    );
     
     function Contact ({ photo, name ,  detail }) {
       return (
-        <div className="contactContainer">
+        <article className="contactContainer">
           <div className="profileContainer">
             <img src={ photo } className="profileImg"></img>
             <div className="profileInfo">
@@ -55,11 +59,11 @@
               <h3 className="profileDetail">{ detail }</h3>
               </div>
           </div>
-          <div className="buttonsContainer">
+          <ButtonContainer>
             <Button>Call</Button>
             <Button>Send e-mail</Button>
-          </div>
-        </div>
+          </ButtonContainer>
+        </article>
     )};
     
     const element = (

@@ -1,21 +1,23 @@
+/* ALL */
+
 :root {
-  --blue: #4D77FF;
-  --blueLight: #56BBF1;
+  --blue: #4d77ff;
+  --blueLight: #56bbf1;
   --blueButton: #59e7f1;
-  --yellow: #F2FA5A;
+  --yellow: #f2fa5a;
   --grey: rgb(118);
-  --yellowLight: #F1E1A6;
-  --pink: #F4BBBB;
+  --yellowLight: #f1e1a6;
+  --pink: #f4bbbb;
 }
 
-//ALL
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background: var(--blue);
   font-family: "Helvetica", sans-serif;
   padding: 20px;
@@ -26,12 +28,9 @@ html, body {
   flex-direction: column;
 }
 
-//HEADER
+/* HEADER */
+
 .headerContainer {
-
-}
-
-header.headerContainer{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +57,7 @@ header.headerContainer{
   background: var(--yellowLight);
 }
 
-//MAIN
+/ MAIN /
 .mainSection {
   padding: 25px 0px 0px 0;
 }
@@ -75,7 +74,7 @@ header.headerContainer{
 }
 
 .profileContainer {
-	display: flex;
+  display: flex;
   gap: 20px;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +85,7 @@ header.headerContainer{
   flex-direction: column;
 }
 
-.profileImg{
+.profileImg {
   border-radius: 50%;
   width: 90px;
   height: 90px;
@@ -108,23 +107,21 @@ header.headerContainer{
   font-weight: bold;
 }
 
-//BUTTONS
+/* BUTTONS */
 
 .buttonsContainer {
   display: flex;
-  gap: 2px;
+  gap: 8px;
 }
 
 .button {
   background: var(--blueButton);
-  decoration: none;
   border: 1px solid var(--yellow);
   border-radius: 8px;
   color: var(--yellow);
   font-weight: bold;
   font-size: 14px;
   padding: 10px 5px 10px 5px;
-  margin-right: 5px;
 }
 
 .aLink {
